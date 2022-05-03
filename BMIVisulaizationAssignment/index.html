@@ -1,0 +1,36 @@
+<!doctype html>
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI visualization</title>
+    <link href="styles.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+<div class="title">
+    <h1>BMI score visualization</h1>
+</div>
+
+<div class="container" id="app">
+    <div id="selector">
+        <span :style="warning()" id="selectValue"> {{value}} </span>
+    </div>
+
+    <div class="sliderLastPart">
+        <div class="sliderMiddlePart">
+            <div class="sliderFirstPart">
+                <input @change="warning()" v-model="value" type="range" id="myRange" min="0" max="120" value="60">
+            </div>
+        </div>
+    </div>
+    <div class="scoreStatus">
+        <p>The pet is : {{status}}</p>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

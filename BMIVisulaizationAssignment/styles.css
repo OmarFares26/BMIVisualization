@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #2f3640;
+    font-family: 'Fugaz One', cursive;
+}
+.title
+{
+    margin-top: 2%;
+    text-align: center;
+}
+
+.title h1
+{
+    text-transform: uppercase;
+    color: #e74c3c;
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sliderLastPart {
+    width: 600px;
+    background: #ff8800;
+    z-index: -999;
+    border-radius: 20px;
+
+}
+.sliderMiddlePart {
+    display: flex;
+    width: 428px;
+    background: #7CFC00;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.sliderFirstPart {
+    width: 150px;
+    background: #FFFF00;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+input[type=range] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    width: 600px;
+    height: 25px;
+    border-radius: 20px;
+    background: transparent;
+    margin-left: -1px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    background-color: #e74c3c;
+    cursor: pointer;
+    transition: all .3s ease-in;
+    border: 2px solid #d3d3d3;
+}
+input[type=range]::-webkit-slider-thumb:hover {
+
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.4);
+
+}
+
+#selector {
+    margin: 0 auto;
+    margin-bottom: 5%;
+    height: 48px;
+    width: 48px;
+    z-index: 2;
+}
+
+#selectValue {
+    width: 48px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    background: #E74C3CFF;
+    text-align: center;
+    line-height: 45px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+#selectValue::after {
+    content: "";
+    border-top: 17px solid #E74C3CFF;
+    border-left: 24px solid #2f3640;
+    border-right: 24px solid #2f3640;
+    position: absolute;
+    bottom: -14px;
+    left: 0;
+}
+.scoreStatus{
+    margin-top: 1%;
+    text-align: center;
+}
+.scoreStatus p{
+    font-size: 20px;
+    font-weight: 600;
+    color: #e74c3c;
+}
