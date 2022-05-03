@@ -8,7 +8,7 @@ new Vue({
     },
     methods: {
         warning: function() {
-            if (this.value <= 30) {
+            if (this.value <  30) {
                 this.status = "Underweight";
             }
             else if(this.value <= 90){
